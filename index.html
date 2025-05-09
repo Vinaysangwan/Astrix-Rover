@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Astrix Rover</title>
+
+    <!-- Link for StyleSheet -->
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/shared/header.css" />
+    <link rel="stylesheet" href="styles/shared/footer.css" />
+  </head>
+  <body class="body">
+    <!-- header of the Page -->
+    <header class="header">
+      <!-- Left Navigation -->
+      <div class="left-nav">
+        <img src="assets/logo.jpg" class="logo" />
+        <!-- <div class="logo-name">Astrix Rover</div> -->
+      </div>
+
+      <!-- Right Navigation -->
+      <div class="right-nav" id="js-right-nav">
+        <img src="assets/icons/menu.png" class="menu-icon" id="js-menu-icon" />
+
+        <!-- Toggle Element -->
+        <div class="menu-list" id="js-menu-list">
+          <div class="menu-item-div">
+            <a href="index.html" class="menu-item-text">Home</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="pages/about_us.html" class="menu-item-text">About Us</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="pages/the_rover.html" class="menu-item-text">Rover</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="pages/team.html" class="menu-item-text">Team</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="pages/timeline.html" class="menu-item-text">Timeline</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="pages/support_us.html" class="menu-item-text"
+              >Support Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Body -->
+    <main class="main">
+      <!--Introduction  -->
+      <section class="intro">
+        <h1 class="intro-heading">Astrix Rover</h1>
+        <h2 class="intro-heading2">Exploring Mars with Innovation & Passion</h2>
+        <p class="intro-text">Exploring Mars with Innovation & Passion</p>
+        <a href="pages/support_us.html" class="intro-button"
+          >Support Our Mission</a
+        >
+      </section>
+
+      <!-- About Us -->
+      <section class="about-us section">
+        <h2 class="aboutus-heading section-heading">About Us</h2>
+        <p class="aboutus-text section-text">
+          We are a passionate team of 20+ students from Amity University, united
+          by our love for innovation and exploration! Hailing from diverse
+          academic backgrounds, we have come together with a shared dream: to
+          compete in prestigious Rover challenges around the globe. Our sights
+          are set on the 2025-26 International Rover Challenge (IRC) and the
+          University Rover Challenge (URC), where we aim to showcase our skills,
+          creativity, and teamwork on the world stage.
+        </p>
+        <a href="pages/about_us.html" class="aboutus-button section-button"
+          >Learn More About Us</a
+        >
+      </section>
+
+      <!-- Rover -->
+      <section class="rover section">
+        <h2 class="rover-heading section-heading">The Rover</h2>
+        <p class="rover-text section-text">
+          Our rover is engineered with advanced sensors, robust mobility
+          systems, and artificial intelligence designed to navigate the
+          challenging terrain of Mars. From high-resolution imaging to sample
+          collection, every component is built for exploration.
+        </p>
+        <h3 class="rover-astrix-rover-text">Astrix Rover</h3>
+        <img src="assets/rover1.jpg" class="rover-img" />
+        <a href="pages/the_rover.html" class="section-button"
+          >More About Rover</a
+        >
+      </section>
+
+      <!-- Team -->
+      <section class="team">
+        <div class="container">
+          <h2>Meet the Team</h2>
+          <div class="team-grid">
+            <div class="team-card">
+              <img
+                class="team-card-img"
+                src="assets/team/reetunjai.jpg"
+                alt="Team Member 1"
+              />
+              <h3 class="team-card-name">Reetunjai Dutta</h3>
+              <p class="team-card-role">Mechanical Lead</p>
+            </div>
+            <div class="team-card">
+              <img
+                class="team-card-img"
+                src="assets/team/sajan.jpg"
+                alt="Team Member 2"
+              />
+              <h3 class="team-card-name">Sajan Dhakal</h3>
+              <p class="team-card-role">Automation Lead</p>
+            </div>
+            <div class="team-card">
+              <img
+                class="team-card-img"
+                style="object-position: top; object-fit: contain"
+                src="assets/team/vinay.png"
+                alt="Team Member 3"
+              />
+              <h3 class="team-card-name">Vinay Sangwan</h3>
+              <p class="team-card-role">Electronics Lead</p>
+            </div>
+          </div>
+          <a href="pages/team.html" class="section-button">View Full Team</a>
+        </div>
+      </section>
+
+      <!-- TimeLine -->
+      <section class="timeline-section">
+        <div class="timeline-section-container">
+          <h2>Project Timeline</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Concept & Ideation</h3>
+                <span class="date">Jan 2025</span>
+                <p>
+                  Initial brainstorming, feasibility studies, and design
+                  sketches.
+                </p>
+                <img
+                  class="timeline-img"
+                  src="assets/timeline.jpg"
+                  alt="Timeline Photo"
+                />
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Prototype Development</h3>
+                <span class="date">Apr 2025</span>
+                <p>
+                  Building the first prototype with essential components and
+                  software.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Slider -->
+    <section
+      class="slider"
+      style="--width: 140px; --height: 60px; --quantity: 10"
+    >
+      <div class="list">
+        <div class="item" style="--position: 1">
+          <img src="assets/slider_img/slider_1.png" alt="" />
+          <p class="item-text">Explore</p>
+        </div>
+        <div class="item" style="--position: 2">
+          <img src="assets/slider_img/slider_2.png" alt="" />
+          <p class="item-text">Innovate</p>
+        </div>
+        <div class="item" style="--position: 3">
+          <img src="assets/slider_img/slider_3.png" alt="" />
+          <p class="item-text">Autonomous</p>
+        </div>
+        <div class="item" style="--position: 4">
+          <img src="assets/slider_img/slider_4.png" alt="" />
+          <p class="item-text">Precise</p>
+        </div>
+        <div class="item" style="--position: 5">
+          <img src="assets/slider_img/slider_5.png" alt="" />
+          <p class="item-text">Engineer</p>
+        </div>
+        <div class="item" style="--position: 6">
+          <img src="assets/slider_img/slider_6.png" alt="" />
+          <p class="item-text">Collab</p>
+        </div>
+        <div class="item" style="--position: 7">
+          <img src="assets/slider_img/slider_7.png" alt="" />
+          <p class="item-text">Discover</p>
+        </div>
+        <div class="item" style="--position: 8">
+          <img src="assets/slider_img/slider_8.png" alt="" />
+          <p class="item-text">Challenge</p>
+        </div>
+        <div class="item" style="--position: 9">
+          <img src="assets/slider_img/slider_9.png" alt="" />
+          <p class="item-text">Curiosity</p>
+        </div>
+        <div class="item" style="--position: 10">
+          <img src="assets/slider_img/slider_10.png" alt="" />
+          <p class="item-text">Resiliance</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <script type="module" src="scripts/index.js"></script>
+    <script type="module" src="scripts/shared/heading.js"></script>
+  </body>
+</html>

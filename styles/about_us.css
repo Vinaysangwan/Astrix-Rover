@@ -1,0 +1,75 @@
+.body {
+  background: url("../assets/space_bg.jpg");
+  background-position: center center;
+  background-size: cover;
+
+  color: white;
+}
+
+/* Main layout */
+.about-main {
+  padding: 4rem 1rem;
+}
+
+.about-hero,
+.about-section,
+.about-events,
+.about-images {
+  max-width: 900px;
+  margin: 3rem auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Reveal animation */
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Headings */
+.about-section h2,
+.about-events h2,
+.about-images h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #82b1ff;
+}
+
+/* Events List */
+.about-events ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-events li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.img-placeholder {
+  width: 250px;
+  height: 160px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px dashed #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  color: #ccc;
+  border-radius: 8px;
+}

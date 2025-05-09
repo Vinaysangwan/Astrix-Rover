@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rover</title>
+
+    <link rel="stylesheet" href="../styles/shared/header.css" />
+    <link rel="stylesheet" href="../styles/rover.css" />
+  </head>
+  <body class="body">
+    <!-- header of the Page -->
+    <header class="header">
+      <!-- Left Navigation -->
+      <div class="left-nav">
+        <img src="../assets/logo.jpg" class="logo" />
+        <!-- <div class="logo-name">Astrix Rover</div> -->
+      </div>
+
+      <!-- Right Navigation -->
+      <div class="right-nav" id="js-right-nav">
+        <img
+          src="../assets/icons/menu.png"
+          class="menu-icon"
+          id="js-menu-icon"
+        />
+
+        <!-- Toggle Element -->
+        <div class="menu-list" id="js-menu-list">
+          <div class="menu-item-div">
+            <a href="../index.html" class="menu-item-text">Home</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="about_us.html" class="menu-item-text">About Us</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="the_rover.html" class="menu-item-text">Rover</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="team.html" class="menu-item-text">Team</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="timeline.html" class="menu-item-text">Timeline</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="support_us.html" class="menu-item-text">Support Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Rover Section -->
+    <section class="rover-section">
+      <h1>The Astrix Rover</h1>
+      <p>
+        Engineered for exploration. Designed with a fusion of AI, sensors, and
+        mechanical precision — our rover is built to thrive in extreme Martian
+        terrain.
+      </p>
+      <img
+        src="../assets/rover1.jpg"
+        alt="Astrix Rover Image"
+        class="rover-img"
+      />
+    </section>
+
+    <!-- Rover Timeline -->
+    <section class="rover-timeline">
+      <div class="rover-timeline-item animate">
+        <h3>🧠 Concept & Ideation</h3>
+        <span class="timeline-date">January 2025</span>
+        <p>
+          We began with sketches and brainstorms, aligning our mission with
+          competition objectives and exploring potential design architectures.
+        </p>
+      </div>
+
+      <div class="rover-timeline-item animate">
+        <h3>🔧 Prototype Development</h3>
+        <span class="timeline-date">April 2025</span>
+        <p>
+          Mechanical and electronic components were brought together to create
+          our first functional prototype, powered by microcontrollers and smart
+          sensors.
+        </p>
+      </div>
+
+      <div class="rover-timeline-item animate">
+        <h3>🤖 Sensor Integration & Testing</h3>
+        <span class="timeline-date">July 2025</span>
+        <p>
+          With AI modules and terrain testing, we refined obstacle detection,
+          autonomous navigation, and robotic arm functionality.
+        </p>
+      </div>
+
+      <div class="rover-timeline-item animate">
+        <h3>🚀 Final Assembly & Simulation</h3>
+        <span class="timeline-date">October 2025</span>
+        <p>
+          We’re simulating mission tasks like soil sampling, GPS navigation, and
+          rock identification to prepare for IRC and URC 2025–26.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Astrix Rover Team. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document
+          .querySelectorAll(".animate")
+          .forEach((el) => observer.observe(el));
+      });
+    </script>
+
+    <script type="module" src="../scripts/shared/heading.js"></script>
+  </body>
+</html>

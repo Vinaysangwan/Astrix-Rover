@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Team</title>
+
+    <link rel="stylesheet" href="../styles/shared/header.css" />
+    <link rel="stylesheet" href="../styles/team.css" />
+  </head>
+  <body class="body">
+    <!-- header of the Page -->
+    <header class="header">
+      <!-- Left Navigation -->
+      <div class="left-nav">
+        <img src="../assets/logo.jpg" class="logo" />
+        <!-- <div class="logo-name">Astrix Rover</div> -->
+      </div>
+
+      <!-- Right Navigation -->
+      <div class="right-nav" id="js-right-nav">
+        <img
+          src="../assets/icons/menu.png"
+          class="menu-icon"
+          id="js-menu-icon"
+        />
+
+        <!-- Toggle Element -->
+        <div class="menu-list" id="js-menu-list">
+          <div class="menu-item-div">
+            <a href="../index.html" class="menu-item-text">Home</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="about_us.html" class="menu-item-text">About Us</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="the_rover.html" class="menu-item-text">Rover</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="team.html" class="menu-item-text">Team</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="timeline.html" class="menu-item-text">Timeline</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="support_us.html" class="menu-item-text">Support Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="full-team-section">
+      <h1>🚀 The Astrix Team</h1>
+      <p class="team-intro">
+        A multidisciplinary group of engineers, coders, and designers working
+        together to bring the Astrix Rover to life.
+      </p>
+
+      <!-- Mechanical Team -->
+      <div class="team-category animate">
+        <h2>⚙️ Mechanical Team</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <img
+              src="../assets/team/reetunjai.jpg"
+              alt="Reetunjai"
+              class="team-card-img"
+            />
+            <h3 class="team-card-name">Reetunjai Dutta</h3>
+            <p class="team-card-role">Mechanical Lead</p>
+          </div>
+          <div class="team-card">
+            <img
+              src="../assets/team/mech2.jpg"
+              alt="Member"
+              class="team-card-img"
+            />
+            <h3 class="team-card-name">Ananya Verma</h3>
+            <p class="team-card-role">CAD & Suspension</p>
+          </div>
+          <div class="team-card">
+            <img
+              src="../assets/team/mech3.jpg"
+              alt="Member"
+              class="team-card-img"
+            />
+            <h3 class="team-card-name">Harsh Bansal</h3>
+            <p class="team-card-role">Chassis & Drivetrain</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automation Team -->
+      <div class="team-category animate">
+        <h2>🤖 Automation Team</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <img
+              src="../assets/team/sajan.jpg"
+              alt="Sajan"
+              class="team-card-img"
+            />
+            <h3 class="team-card-name">Sajan Dhakal</h3>
+            <p class="team-card-role">Automation Lead</p>
+          </div>
+          <div class="team-card">
+            <img
+              src="../assets/team/auto2.jpg"
+              alt="Member"
+              class="team-card-img"
+            />
+            <h3 class="team-card-name">Mehak Arora</h3>
+            <p class="team-card-role">Navigation AI</p>
+          </div>
+          <div class="team-card">
+            <img
+              src="../assets/team/auto3.jpg"
+              alt="Member"
+              class="team-card-img"
+            />
+            <h3 class="team-card-name">Ritvik Joshi</h3>
+            <p class="team-card-role">Sensor Integration</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Electronics Team -->
+      <div class="team-category animate">
+        <h2>🔌 Electronics Team</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <img
+              src="../assets/team/vinay.png"
+              alt="Vinay"
+              class="team-card-img"
+            />
+            <h3 class="team-card-name">Vinay Sangwan</h3>
+            <p class="team-card-role">Electronics Lead</p>
+          </div>
+          <div class="team-card">
+            <img
+              src="../assets/team/elec2.jpg"
+              alt="Member"
+              class="team-card-img"
+            />
+            <h3 class="team-card-name">Shruti Patel</h3>
+            <p class="team-card-role">Power Systems</p>
+          </div>
+          <div class="team-card">
+            <img
+              src="../assets/team/elec3.jpg"
+              alt="Member"
+              class="team-card-img"
+            />
+            <h3 class="team-card-name">Raj Chauhan</h3>
+            <p class="team-card-role">PCB & Sensors</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        document
+          .querySelectorAll(".animate")
+          .forEach((el) => observer.observe(el));
+      });
+    </script>
+
+    <script type="module" src="../scripts/shared/heading.js"></script>
+  </body>
+</html>
