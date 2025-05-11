@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Work Timeline</title>
+
+    <link rel="stylesheet" href="../styles/shared/header.css" />
+    <link rel="stylesheet" href="../styles/timeline.css" />
+  </head>
+  <body class="body">
+    <!-- header of the Page -->
+    <header class="header">
+      <!-- Left Navigation -->
+      <div class="left-nav">
+        <img src="../assets/logo.jpg" class="logo" />
+        <!-- <div class="logo-name">Astrix Rover</div> -->
+      </div>
+
+      <!-- Right Navigation -->
+      <div class="right-nav" id="js-right-nav">
+        <img
+          src="../assets/icons/menu.png"
+          class="menu-icon"
+          id="js-menu-icon"
+        />
+
+        <!-- Toggle Element -->
+        <div class="menu-list" id="js-menu-list">
+          <div class="menu-item-div">
+            <a href="../index.html" class="menu-item-text">Home</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="about_us.html" class="menu-item-text">About Us</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="the_rover.html" class="menu-item-text">Rover</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="team.html" class="menu-item-text">Team</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="timeline.html" class="menu-item-text">Timeline</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="support_us.html" class="menu-item-text">Support Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Work Timeline Section -->
+    <!-- Work Timeline Section -->
+    <section class="work-timeline">
+      <h1>🚀 Project Timeline</h1>
+      <p class="timeline-intro">
+        Here's how the Astrix Rover project progresses month by month across
+        planning, prototyping, and testing phases.
+      </p>
+
+      <!-- Timeline Description Blocks -->
+      <div class="work-timeline-item animate">
+        <h3>📌 Planning & Research</h3>
+        <span class="timeline-date">March – April 2024</span>
+        <p>
+          Project planning, initial design ideas, and simulation testing were
+          performed before physical prototyping.
+        </p>
+      </div>
+
+      <div class="work-timeline-item animate">
+        <h3>🔧 Prototype & Testing</h3>
+        <span class="timeline-date">May – July 2024</span>
+        <p>
+          Rapid prototyping and simulation, followed by functional testing of
+          digital models and basic rover modules.
+        </p>
+      </div>
+
+      <div class="work-timeline-item animate">
+        <h3>🧪 Integration & Development</h3>
+        <span class="timeline-date">August – October 2024</span>
+        <p>
+          Subsystems were integrated. Advanced electronics, AI, and mechanical
+          design were tested for real-world terrain and conditions.
+        </p>
+      </div>
+
+      <div class="work-timeline-item animate">
+        <h3>🛠️ Refinement & Finalization</h3>
+        <span class="timeline-date">November – December 2024</span>
+        <p>
+          System optimization, documentation, and final reviews take place
+          before international submission and testing.
+        </p>
+      </div>
+
+      <!-- Embedded Timeline Image -->
+      <div class="future-timeline animate">
+        <h2>📊 Full Visual Timeline</h2>
+        <img
+          src="../assets/timeline.jpg"
+          alt="Gantt chart of Astrix Rover project"
+          class="timeline-img"
+        />
+      </div>
+    </section>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document
+          .querySelectorAll(".animate")
+          .forEach((el) => observer.observe(el));
+      });
+    </script>
+    <script type="module" src="../scripts/shared/heading.js"></script>
+  </body>
+</html>

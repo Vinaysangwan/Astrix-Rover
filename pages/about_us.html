@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Us</title>
+
+    <link rel="stylesheet" href="../styles/shared/header.css" />
+    <link rel="stylesheet" href="../styles/about_us.css" />
+  </head>
+  <body class="body">
+    <!-- header of the Page -->
+    <header class="header">
+      <!-- Left Navigation -->
+      <div class="left-nav">
+        <img src="../assets/logo.jpg" class="logo" />
+        <!-- <div class="logo-name">Astrix Rover</div> -->
+      </div>
+
+      <!-- Right Navigation -->
+      <div class="right-nav" id="js-right-nav">
+        <img
+          src="../assets/icons/menu.png"
+          class="menu-icon"
+          id="js-menu-icon"
+        />
+
+        <!-- Toggle Element -->
+        <div class="menu-list" id="js-menu-list">
+          <div class="menu-item-div">
+            <a href="../index.html" class="menu-item-text">Home</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="about_us.html" class="menu-item-text">About Us</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="the_rover.html" class="menu-item-text">Rover</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="team.html" class="menu-item-text">Team</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="timeline.html" class="menu-item-text">Timeline</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="support_us.html" class="menu-item-text">Support Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="about-main">
+      <section class="about-hero animate">
+        <div class="container">
+          <h1>About Us</h1>
+          <p>
+            We are a passionate team of 20+ students from Amity University,
+            united by our love for innovation and exploration! Hailing from
+            diverse academic backgrounds, we have come together with a shared
+            dream: to compete in prestigious Rover challenges around the globe.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section animate">
+        <div class="container">
+          <h2>Our Mission</h2>
+          <p>
+            To design, build, and test a Mars Rover that reflects the spirit of
+            student-led innovation. Our mission is to excel in real-world
+            engineering and problem-solving while preparing for competitions
+            like the IRC and URC.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section animate">
+        <div class="container">
+          <h2>What Drives Us</h2>
+          <p>
+            Curiosity. Grit. Imagination. These values push us to learn fast,
+            build smart, and work together as one. Every sensor, wheel, and line
+            of code tells our story of resilience and vision.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-events animate">
+        <div class="container">
+          <h2>Targeted Events</h2>
+          <ul>
+            <li>🚀 International Rover Challenge (IRC) 2025–26</li>
+            <li>🌍 University Rover Challenge (URC)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about-images animate">
+        <div class="container">
+          <h2>Our Journey</h2>
+          <div class="image-gallery">
+            <div class="img-placeholder">[Team Photo]</div>
+            <div class="img-placeholder">[Workshop]</div>
+            <div class="img-placeholder">[Design Process]</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 Astrix Rover Team. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Basic scroll animation
+      const animatedSections = document.querySelectorAll(".animate");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      animatedSections.forEach((section) => observer.observe(section));
+    </script>
+
+    <script type="module" src="../scripts/shared/heading.js"></script>
+  </body>
+</html>

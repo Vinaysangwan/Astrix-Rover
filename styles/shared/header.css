@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Odibee+Sans&display=swap");
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.body {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Libre Baskerville", sans-serif;
+
+  cursor: default;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(to right, #000000, #0f2027);
+  color: white;
+  padding: 1rem;
+  height: 3rem;
+}
+
+/* Left Navigation Bar */
+.left-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  cursor: pointer;
+}
+
+.logo {
+  height: 100%;
+  color: white;
+
+  object-fit: fill;
+  object-position: center;
+
+  zoom: 1;
+}
+
+.logo-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  margin-left: 5px;
+}
+
+/* Rigth Navigation Bar */
+/* Right Navigation Container */
+.right-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+/* Menu Icon Styling */
+.menu-icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Menu Dropdown Panel */
+.menu-list {
+  display: none; /* toggled via JS */
+  flex-direction: column;
+  background-color: rgba(38, 50, 56, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 0.5rem 0;
+  border-radius: 1rem;
+  position: absolute;
+  top: 130%;
+  right: 0;
+  z-index: 10;
+  min-width: 160px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease forwards;
+  overflow: hidden;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Each Menu Item Container */
+.menu-item-div {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.2s ease;
+}
+
+/* Remove bottom border from last item */
+.menu-item-div:last-child {
+  border-bottom: none;
+}
+
+/* Hover Style */
+.menu-item-div:hover {
+  background-color: rgba(130, 177, 255, 0.08);
+}
+
+/* Text Style Inside Menu Item */
+.menu-item-text {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 100%;
+  transition: color 0.2s ease;
+}
+
+/* Highlight link on hover */
+.menu-item-div:hover .menu-item-text {
+  color: #82b1ff;
+}

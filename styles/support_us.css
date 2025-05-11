@@ -1,0 +1,85 @@
+.body {
+  background: url("../assets/space_bg.jpg");
+  background-position: center center;
+  background-size: cover;
+
+  color: white;
+}
+
+.support-section {
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.support-section h1 {
+  font-size: 2.4rem;
+  color: #82b1ff;
+  margin-bottom: 1.5rem;
+}
+
+.support-text {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.support-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.qr-container {
+  text-align: center;
+}
+
+.qr-img {
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.qr-caption {
+  margin-top: 1rem;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.sponsor-info h2 {
+  font-size: 1.6rem;
+  color: #82b1ff;
+  margin-bottom: 1rem;
+}
+
+.sponsor-info p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.sponsor-info a {
+  color: #82b1ff;
+  text-decoration: underline;
+}
+
+/* Animation */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  visibility: hidden;
+}
+
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}

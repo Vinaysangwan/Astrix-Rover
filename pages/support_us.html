@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Support Us</title>
+
+    <link rel="stylesheet" href="../styles/shared/header.css" />
+    <link rel="stylesheet" href="../styles/support_us.css" />
+  </head>
+  <body class="body">
+    <!-- header of the Page -->
+    <header class="header">
+      <!-- Left Navigation -->
+      <div class="left-nav">
+        <img src="../assets/logo.jpg" class="logo" />
+        <!-- <div class="logo-name">Astrix Rover</div> -->
+      </div>
+
+      <!-- Right Navigation -->
+      <div class="right-nav" id="js-right-nav">
+        <img
+          src="../assets/icons/menu.png"
+          class="menu-icon"
+          id="js-menu-icon"
+        />
+
+        <!-- Toggle Element -->
+        <div class="menu-list" id="js-menu-list">
+          <div class="menu-item-div">
+            <a href="../index.html" class="menu-item-text">Home</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="about_us.html" class="menu-item-text">About Us</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="the_rover.html" class="menu-item-text">Rover</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="team.html" class="menu-item-text">Team</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="timeline.html" class="menu-item-text">Timeline</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="support_us.html" class="menu-item-text">Support Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="support-section">
+      <h1>🙏 Support the Astrix Rover Mission</h1>
+      <p class="support-text animate">
+        Building a Mars Rover is a student-led effort fueled by passion, late
+        nights, and a dream to innovate. We're currently self-funded and are now
+        inviting sponsors and individual supporters to help us reach the stars.
+      </p>
+
+      <div class="support-content">
+        <!-- QR Code Image -->
+        <div class="qr-container animate">
+          <img src="../assets/QR.jpg" alt="Support QR Code" class="qr-img" />
+          <p class="qr-caption">
+            Scan the QR to contribute directly to the team fund
+          </p>
+        </div>
+
+        <!-- Sponsor Invitation -->
+        <div class="sponsor-info animate">
+          <h2>🌟 Become a Sponsor</h2>
+          <p>
+            We welcome corporate and institutional sponsors who believe in
+            innovation and youth-driven research. Your support will be proudly
+            showcased on our rover, website, and all competition materials.
+          </p>
+          <p>
+            Reach out to us at
+            <a href="mailto:Art.rover.contact@gmail.com"
+              >Art.rover.contact@gmail.com</a
+            >
+            to start the conversation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document
+          .querySelectorAll(".animate")
+          .forEach((el) => observer.observe(el));
+      });
+    </script>
+
+    <script type="module" src="../scripts/shared/heading.js"></script>
+  </body>
+</html>
